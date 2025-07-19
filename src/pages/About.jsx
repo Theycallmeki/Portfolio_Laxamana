@@ -7,10 +7,10 @@ function About() {
       <div style={styles.container}>
         <div style={styles.bio}>
           <p>
-            I am a dedicated Computer Engineering student with a strong passion for embedded systems, AI engineering, and full-stack web development. I specialize in building efficient and scalable solutions that integrate both hardware and software components.
+            I am a dedicated Computer Engineering student with a strong passion for full-stack web development, AI engineering, and embedded systems. I specialize in building scalable and efficient solutions that bring software and hardware together in meaningful ways.
           </p>
           <p>
-            My experience includes developing Raspberry Pi automation projects, AI-integrated applications, and modern web platforms using technologies like React, Node.js, Python, Django, and Django REST Framework. I design and consume RESTful APIs to enable seamless data communication across services, and I work with databases like PostgreSQL, SQLite, and MongoDB to support reliable, data-driven applications.
+            My experience includes modern web platforms using React, Node.js, Python, Django, and Django REST Framework, as well as AI-integrated applications and Raspberry Pi automation. I design and consume RESTful APIs for seamless service communication and work with databases like PostgreSQL, SQLite, and MongoDB to support robust, data-driven applications.
           </p>
           <p>
             Beyond technical development, I have a growing interest in data, including areas like analysis and visualization. I stay updated on emerging technologies and always look forward to collaborating on forward-thinking projects that combine code and creativity to build something impactful.
