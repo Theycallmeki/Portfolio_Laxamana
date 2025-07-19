@@ -3,20 +3,30 @@ import React from 'react';
 function Projects() {
   const projectList = [
     {
-      title: 'Smart Inventory System',
-      description: 'An AI-powered self-service convenience store app built with React, Node.js, and SQLite.',
-      link: 'https://github.com/yourusername/smart-inventory-system'
+      title: 'Portfolio Builder',
+      description: 'A powerful web application built with Django and CKEditor that allows users to generate professional, pre-made portfolios or fully customize their own. It integrates CKEditor via API for rich text editing and content management, ensuring a seamless editing experience. The app emphasizes clean design, user-friendly customization, and rapid deployment—perfect for developers, creatives, or job seekers looking to showcase their work quickly.',
+      link: 'https://github.com/Theycallmeki/Portfolio_builder'
     },
     {
-      title: 'burnik bot',
-      description: 'A Python-based embedded system that controls GPIO pins for LED automation.',
-      link: 'https://github.com/yourusername/pi-led-control'
+      title: 'Smart Inventory',
+      description: 'A thesis-in-progress powered by Node.js and Express.js, designed to function as a smart inventory and POS system using a barcode scanner module. It offers real-time inventory tracking, intelligent stock level predictions, and profit analysis to help streamline store operations. Ideal for small to medium businesses, the system combines automation and data-driven insights to optimize sales and inventory management.',
+      link: 'https://github.com/Theycallmeki/Smart_Inventory_Software'
     },
     {
-      title: 'Netflix EDA Dashboard',
-      description: 'An interactive Python dashboard analyzing Netflix movies and shows using pandas and seaborn.',
-      link: 'https://github.com/yourusername/netflix-eda'
-    }
+      title: 'Image-classifier-and-AI-Chatbot',
+      description: 'A multifunctional web app that combines an image classification system powered by TensorFlow with an intelligent AI chatbot driven by Gemini 2.0 Flash. The frontend is built using React and Vite for fast, responsive performance. Users can upload images for instant classification and interact with a smart chatbot capable of natural, context-aware conversations—making it a seamless blend of computer vision and conversational AI.',
+      link: 'https://github.com/Theycallmeki/Image-classifier-and-AI-Chatbot'
+    },
+    {
+      title: 'Facial-recognition',
+      description: 'This Python project uses OpenCV and MediaPipe for real-time facial recognition. It detects faces, analyzes facial landmarks (like orientation), and displays them with bounding boxes and FPS in webcam input. The FaceRecognizer class supports multiple faces and allows static image processing with optional visualizations.',
+      link: 'https://github.com/Theycallmeki/Facial-recognition'
+    },
+    {
+      title: 'Gabs Chicken Inasal',
+      description: '',
+      link: 'https://github.com/Theycallmeki/Smart_Inventory_Software'
+    },
   ];
 
   return (
