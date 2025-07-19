@@ -8,7 +8,7 @@ function Projects() {
       link: 'https://github.com/yourusername/smart-inventory-system'
     },
     {
-      title: 'Raspberry Pi LED Control',
+      title: 'burnik bot',
       description: 'A Python-based embedded system that controls GPIO pins for LED automation.',
       link: 'https://github.com/yourusername/pi-led-control'
     },
