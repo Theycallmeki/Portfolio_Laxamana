@@ -17,7 +17,6 @@ function Home() {
 
 const styles = {
   section: {
-    minHeight: '100vh',
     padding: '80px 20px',
     color: 'white',
     display: 'flex',

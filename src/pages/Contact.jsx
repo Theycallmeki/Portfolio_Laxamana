@@ -1,22 +1,123 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Contact() {
-  return (
-    <section id="contact" className="section" style={styles.section}>
-      <h1 style={styles.heading}>Contact Me</h1>
-      <p style={styles.subtext}>Feel free to reach out via email or social media!</p>
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [hovered, setHovered] = useState(null); // to track hover state
 
-      <form style={styles.form}>
-        <input type="text" placeholder="Your Name" style={styles.input} required />
-        <input type="email" placeholder="Your Email" style={styles.input} required />
-        <textarea placeholder="Your Message" rows="5" style={styles.textarea} required></textarea>
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Thank you for your message!');
+    setFormData({ name: '', email: '', message: '' });
+  };
+
+  const handleHover = (platform) => setHovered(platform);
+  const handleLeave = () => setHovered(null);
+
+  const getSocialStyle = (platform) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    background: hovered === platform ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.1)',
+    padding: '16px',
+    borderRadius: '12px',
+    color: 'white',
+    textDecoration: 'none',
+    width: '100px',
+    transform: hovered === platform ? 'scale(1.08)' : 'scale(1)',
+    transition: 'all 0.3s ease',
+  });
+
+  return (
+    <section style={styles.section}>
+      <h1 style={styles.heading}>Contact Me</h1>
+      <p style={styles.subtext}>Feel free to reach out via social media!</p>
+
+      <form style={styles.form} onSubmit={handleSubmit}>
+        <input
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+          style={styles.input}
+          required
+        />
+        <input
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+          style={styles.input}
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          value={formData.message}
+          onChange={handleChange}
+          style={styles.textarea}
+          required
+        />
         <button type="submit" style={styles.button}>Send Message</button>
       </form>
 
-      <div style={styles.links}>
-        <a href="mailto:youremail@example.com" style={styles.link}>📧 youremail@example.com</a>
-        <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" style={styles.link}>🐦 Twitter</a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" style={styles.link}>💻 GitHub</a>
+      <div style={styles.socialGrid}>
+        <a
+          href="https://www.facebook.com/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => handleHover('facebook')}
+          onMouseLeave={handleLeave}
+          style={getSocialStyle('facebook')}
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+            alt="Facebook"
+            style={styles.icon}
+          />
+          <span>Facebook</span>
+        </a>
+
+        <a
+          href="https://github.com/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => handleHover('github')}
+          onMouseLeave={handleLeave}
+          style={getSocialStyle('github')}
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            alt="GitHub"
+            style={styles.icon}
+          />
+          <span>GitHub</span>
+        </a>
+
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => handleHover('linkedin')}
+          onMouseLeave={handleLeave}
+          style={getSocialStyle('linkedin')}
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+            alt="LinkedIn"
+            style={styles.icon}
+          />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+
+      <div style={styles.contactInfo}>
+        <p><strong>Phone:</strong> +1 (234) 567-890</p>
+        <p><strong>Location:</strong> Your City, Country</p>
       </div>
     </section>
   );
@@ -27,17 +128,18 @@ const styles = {
     padding: '60px 20px',
     color: 'white',
     textAlign: 'center',
-    minHeight: '100vh',
     backgroundColor: 'transparent',
-    backdropFilter: 'blur(2px)',
+    backdropFilter: 'blur(4px)',
   },
   heading: {
-    fontSize: '48px',
+    fontSize: '42px',
     marginBottom: '10px',
+    color: 'white',
   },
   subtext: {
     fontSize: '18px',
     marginBottom: '30px',
+    color: 'white',
   },
   form: {
     maxWidth: '500px',
@@ -47,41 +149,45 @@ const styles = {
     gap: '15px',
   },
   input: {
-    padding: '12px 15px',
-    fontSize: '16px',
-    borderRadius: '5px',
+    padding: '12px',
+    borderRadius: '8px',
     border: '1px solid #ccc',
-    background: 'rgba(255,255,255,0.1)',
-    color: '#fff',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    color: 'white',
+    fontSize: '16px',
   },
   textarea: {
-    padding: '12px 15px',
-    fontSize: '16px',
-    borderRadius: '5px',
+    padding: '12px',
+    borderRadius: '8px',
     border: '1px solid #ccc',
-    background: 'rgba(255,255,255,0.1)',
-    color: '#fff',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    color: 'white',
+    fontSize: '16px',
   },
   button: {
-    padding: '12px 20px',
-    background: 'linear-gradient(to right, #00bfc1, #cc0066)',
-    color: '#fff',
-    fontSize: '16px',
-    fontWeight: 'bold',
+    padding: '12px',
+    background: 'linear-gradient(135deg, #007bff, #0056b3)',
+    color: 'white',
     border: 'none',
-    borderRadius: '5px',
+    borderRadius: '8px',
     cursor: 'pointer',
+    fontWeight: 'bold',
   },
-  links: {
+  socialGrid: {
     display: 'flex',
-    flexDirection: 'column',
-    gap: '8px',
-    fontSize: '16px',
-    color: '#ccc',
+    justifyContent: 'center',
+    gap: '20px',
+    marginBottom: '30px',
+    flexWrap: 'wrap',
   },
-  link: {
-    color: '#00bfc1',
-    textDecoration: 'none',
+  icon: {
+    width: '32px',
+    height: '32px',
+    marginBottom: '8px',
+  },
+  contactInfo: {
+    color: 'white',
+    marginTop: '20px',
   },
 };
 
