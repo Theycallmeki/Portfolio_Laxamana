@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Cpu, Code, Terminal, GitBranch, Settings, Menu } from 'lucide-react';
+import {
+  Cpu,
+  Code,
+  Terminal,
+  GitBranch,
+  Settings,
+  Menu,
+  Mail,              // <- Added for Contact
+  MessageSquareCode, // <- Optional: Another coding-style contact icon
+  Inbox              // <- Optional: Another contact icon
+} from 'lucide-react';
 import '../styles/Header.css';
 
 function Header() {
@@ -33,7 +43,7 @@ function Header() {
             </div>
             <div className="logo-text">
               <h1>&lt;Kian.Laxamana/&gt;</h1>
-              <p>Aspiring Web developer</p>
+              <p>Aspiring Web Developer</p>
             </div>
           </div>
 
@@ -59,7 +69,11 @@ function Header() {
             <NavLink href="#about" icon={<Code className="icon-small" />} text="./about" />
             <NavLink href="#projects" icon={<GitBranch className="icon-small" />} text="git/projects" />
             <NavLink href="#techstack" icon={<Settings className="icon-small" />} text="tech.stack" />
-            <NavLink href="#contact" icon={<Settings className="icon-small" />} text="contact.exe" />
+            <NavLink href="#contact" icon={<Mail className="icon-small" />} text="contact.exe" />
+            {/* Alternative Icons:
+                <MessageSquareCode className="icon-small" />
+                <Inbox className="icon-small" />
+            */}
           </nav>
         </div>
       </div>
@@ -77,7 +91,7 @@ function Header() {
           <NavLink href="#about" icon={<Code className="icon-small" />} text="./about" />
           <NavLink href="#projects" icon={<GitBranch className="icon-small" />} text="git/projects" />
           <NavLink href="#techstack" icon={<Settings className="icon-small" />} text="tech.stack" />
-          <NavLink href="#contact" icon={<Settings className="icon-small" />} text="contact.exe" />
+          <NavLink href="#contact" icon={<Mail className="icon-small" />} text="contact.exe" />
         </nav>
       </div>
 
