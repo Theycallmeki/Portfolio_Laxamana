@@ -5,20 +5,15 @@ function About() {
     <section id="about" className="section" style={styles.section}>
       <h1 style={styles.heading}>About Me</h1>
       <div style={styles.container}>
-        <img
-          src="/your-profile-image.jpg"
-          alt="Profile"
-          style={styles.image}
-        />
         <div style={styles.bio}>
           <p>
-            Hello! I'm <strong>Kian Jacob Laxamana</strong>, a Computer Engineering student passionate about embedded systems, AI engineering, and full-stack web development.
+            I am a dedicated Computer Engineering student with a strong passion for embedded systems, AI engineering, and full-stack web development. I specialize in building efficient and scalable solutions that integrate both hardware and software components.
           </p>
           <p>
-            I enjoy building smart systems that combine hardware and software — whether it's a Raspberry Pi automation script or a React-based web platform. I'm also experienced in Python, Node.js, C/C++, and Assembly.
+            My experience includes developing Raspberry Pi automation projects, AI-integrated applications, and modern web platforms using technologies like React, Node.js, Python, Django, and Django REST Framework. I design and consume RESTful APIs to enable seamless data communication across services, and I work with databases like PostgreSQL, SQLite, and MongoDB to support reliable, data-driven applications.
           </p>
           <p>
-            Outside of coding, I enjoy digital art and exploring new technologies. I'm always eager to collaborate on innovative tech projects and continue learning.
+            Beyond technical development, I have a growing interest in data, including areas like analysis and visualization. I stay updated on emerging technologies and always look forward to collaborating on forward-thinking projects that combine code and creativity to build something impactful.
           </p>
         </div>
       </div>
@@ -46,13 +41,6 @@ const styles = {
     gap: '30px',
     maxWidth: '800px',
     margin: '0 auto',
-  },
-  image: {
-    width: '160px',
-    height: '160px',
-    borderRadius: '50%',
-    objectFit: 'cover',
-    border: '3px solid white',
   },
   bio: {
     fontSize: '18px',

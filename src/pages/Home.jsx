@@ -5,9 +5,11 @@ function Home() {
     <section id="home" className="section" style={styles.section}>
       <div style={styles.container}>
         <h1 style={styles.title}>Hi, I'm Kian Jacob Laxamana</h1>
-        <h2 style={styles.subtitle}>Computer Engineering Student | AI & Embedded Systems Enthusiast</h2>
+        <h2 style={styles.subtitle}>
+          Computer Engineering Student | AI, Embedded Systems & Web Development Enthusiast
+        </h2>
         <p style={styles.description}>
-          I build intelligent systems that combine hardware, software, and data. Let's create something amazing.
+          I build smart, integrated solutions that bridge hardware, software, and data. Let's create something amazing.
         </p>
         <a href="#projects" style={styles.cta}>View My Work</a>
       </div>

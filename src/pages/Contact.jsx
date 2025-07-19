@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [hovered, setHovered] = useState(null); // to track hover state
+  const [hovered, setHovered] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -10,8 +11,19 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message!');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs
+      .send('service_cdge688', 'template_juxpl5t', formData, 'ASbvGcAxyGztI8pe9')
+      .then(
+        () => {
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          alert('Failed to send message. Please try again.');
+          console.error(error);
+        }
+      );
   };
 
   const handleHover = (platform) => setHovered(platform);
@@ -34,7 +46,7 @@ function Contact() {
   return (
     <section style={styles.section}>
       <h1 style={styles.heading}>Contact Me</h1>
-      <p style={styles.subtext}>Feel free to reach out via social media!</p>
+      <p style={styles.subtext}>Feel free to reach out via social media or the form below!</p>
 
       <form style={styles.form} onSubmit={handleSubmit}>
         <input
@@ -67,7 +79,7 @@ function Contact() {
 
       <div style={styles.socialGrid}>
         <a
-          href="https://www.facebook.com/yourprofile"
+          href="https://www.facebook.com/kian.laxamana.3"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => handleHover('facebook')}
@@ -83,7 +95,7 @@ function Contact() {
         </a>
 
         <a
-          href="https://github.com/yourprofile"
+          href="https://github.com/Theycallmeki"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => handleHover('github')}
@@ -99,7 +111,7 @@ function Contact() {
         </a>
 
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://www.linkedin.com/in/kian-laxamana/"
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => handleHover('linkedin')}
@@ -116,8 +128,8 @@ function Contact() {
       </div>
 
       <div style={styles.contactInfo}>
-        <p><strong>Phone:</strong> +1 (234) 567-890</p>
-        <p><strong>Location:</strong> Your City, Country</p>
+        <p><strong>Phone:</strong> +63 945 463 7549</p>
+        <p><strong>Email:</strong> laxamana.kian13@gmail.com</p>
       </div>
     </section>
   );

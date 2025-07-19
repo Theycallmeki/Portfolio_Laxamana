@@ -24,8 +24,8 @@ function Projects() {
     },
     {
       title: 'Gabs Chicken Inasal',
-      description: '',
-      link: 'https://github.com/Theycallmeki/Smart_Inventory_Software'
+      description: 'A collaborative project developed during our 2nd year, where our team selected a local business in Angeles City—Gabs Chicken Inasal—and created a dedicated website to boost its online presence. Built with React and integrated with the Google Maps API, the site features location-based services, a responsive layout, and engaging content that showcases the restaurant’s menu, history, and contact information. The project reflects our early hands-on experience in web development and real-world business collaboration.',
+      link: 'https://github.com/Theycallmeki/Gabs-Chicken-Inasal'
     },
   ];
 
