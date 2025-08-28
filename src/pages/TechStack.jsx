@@ -13,6 +13,10 @@ function TechStack() {
     Backend: [
       { name: 'Node.js', logo: 'https://cdnjs.cloudflare.com/ajax/libs/simple-icons/11.8.0/nodedotjs.svg', color: '#339933' },
       { name: 'Express', logo: 'https://cdnjs.cloudflare.com/ajax/libs/simple-icons/11.8.0/express.svg', color: '#000000' },
+      { name: 'Django', logo: 'https://cdnjs.cloudflare.com/ajax/libs/simple-icons/11.8.0/django.svg', color: '#092E20' },
+      { name: 'Flask', logo: 'https://cdnjs.cloudflare.com/ajax/libs/simple-icons/11.8.0/flask.svg', color: '#000000' }
+    ],
+    Database: [
       { name: 'SQLite', logo: 'https://cdnjs.cloudflare.com/ajax/libs/simple-icons/11.8.0/sqlite.svg', color: '#003B57' },
       { name: 'PostgreSQL', logo: 'https://cdnjs.cloudflare.com/ajax/libs/simple-icons/11.8.0/postgresql.svg', color: '#336791' }
     ],
@@ -76,8 +80,6 @@ function TechStack() {
     </section>
   );
 }
-
-
 
 const styles = {
   section: {
